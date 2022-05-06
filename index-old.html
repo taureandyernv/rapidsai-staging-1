@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A suite of software libraries for executing end-to-end data science completely on GPUs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="fb:app_id" content="1679326302390196"/>
+  <meta property="og:title" content="Open GPU Data Science | RAPIDS"/>
+  <meta property="og:type" content="Website"/>
+  <meta property="og:description" content="A suite of software libraries for executing end-to-end data science completely on GPUs"/>
+  <meta name="og:site_name" content="RAPIDS"/>
+  <meta property="og:image" content="/assets/images/og_image.png"/>
+  <meta property="og:image:secure_url" content="/assets/images/og_image.png"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="400"/>
+  <meta property="og:image:height" content="300"/>
+  <meta property="og:image:alt" content="RAPIDS Logo"/>
+
+  <meta name="twitter:site" content="https://twitter.com/rapidsai"/>
+  <meta name="twitter:card" content="Open GPU Data Science | RAPIDS"/>
+  <meta name="twitter:image" content="/assets/images/og_image.png"/>
+  <meta name="twitter:creator" content="@RAPIDSAI"/>
+  <meta name="twitter:title" content="Open GPU Data Science | RAPIDS"/>
+  <meta name="twitter:description" content="A suite of software libraries for executing end-to-end data science completely on GPUs"/>
+
+  <title>Open GPU Data Science | RAPIDS</title>
+
+  <link rel='shortcut icon' type='image/x-icon' href='/assets/favicon.ico' />
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/highlight.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="//assets.adobedtm.com/b92787824f2e0e9b68dc2e993f9bd995339fe417/satelliteLib-30c8ffcc8ece089156fd5590fbcf390ffc296f51.js"></script>
+</head>
+<body>
+<header>
+  <div id="nav-fixed" class="position-fixed">
+    <nav>
+  <a class="nav-logo" href="/index.html"><img src="/assets/images/rapids-logo.svg" alt="RAPIDS logo"></a>
+  <div class="menu">&#9776;</div>
+  <ul>
+  
+    
+        <li class="active"><a href="/index.html">HOME</a></li>
+    
+  
+    
+        <li class=""><a href="/about.html">ABOUT</a></li>
+    
+  
+    
+        <li class=""><a href="/start.html">GET STARTED</a></li>
+    
+  
+    
+        <li class=""><a href="/community.html">COMMUNITY</a></li>
+    
+  
+    
+        <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+    
+  
+    
+        <li><a href="https://docs.rapids.ai" target="_blank">DOCS</a></li>
+    
+  
+    
+        <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+    
+  
+  </ul>
+  <script>
+    $('nav .menu').click(function(){ $('nav ul').toggleClass('show-height') })
+  </script>
+</nav>
+  </div>
+  <div class="header-branding">
+      <div class="header-logo">
+        <a href=""><img src="/assets/images/rapids-logo.svg" alt="RAPIDS logo"></a>
+      </div>
+      <h1 class="header-tagline">Open GPU Data Science</h1>
+      <a href="start.html" class="blue-btn">GET STARTED</a>
+  </div>
+  <div class="slopecap-header"></div>
+</header>
+
+<h1 class="section-title-full" id="gpu-data-science">GPU DATA SCIENCE</h1>
+
+<section class="background-white padding-top-1em padding-bottom-10em">
+ 	<div class="pure-g">
+	    <div class="container-padding">
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-accelerated-data-science"><i class="fal fa-info-circle"></i> Accelerated Data Science</h2>
+<p>The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <br /> <strong><a href="about.html">Learn about RAPIDS <i class="fas fa-angle-double-right"></i></a></strong></p>
+ </div>
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-scale-out-on-gpus"><i class="fal fa-expand-arrows-alt"></i> Scale Out on GPUS</h2>
+<p>Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clusters with Dask. <br /> <strong><a href="dask.html">Learn about Dask <i class="fas fa-angle-double-right"></i></a></strong></p>
+ </div>
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-python-integration"><i class="fab fa-python"></i> Python Integration</h2>
+<p>Accelerate your Python data science toolchain with minimal code changes and no new tools to learn. <br /> <strong><a href="#libraries">Learn about our libraries <i class="fas fa-angle-double-right"></i></a></strong></p>
+ </div>
+	    </div>
+	</div>
+	<div class="pure-g">
+	    <div class="container-padding">
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-top-model-accuracy"><i class="fal fa-bullseye"></i> Top Model Accuracy</h2>
+<p>Increase machine learning model accuracy by iterating on models faster and deploying them more frequently. <br /> <strong><a href="hpo.html">Learn about RAPIDS for model optimization <i class="fas fa-angle-double-right"></i></a></strong></p>
+ </div>
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-reduced-training-time"><i class="fal fa-clock"></i> Reduced Training Time</h2>
+<p>Drastically improve your productivity with more interactive data science tools like XGBoost. <br /> <strong><a href="xgboost.html">Learn about XGBoost <i class="fas fa-angle-double-right"></i></a></strong>
+<br /> <strong><a href="https://docs.rapids.ai/api/cuml/stable/" target="_blank">Learn about accelerated ML with cuML <i class="fas fa-angle-double-right"></i></a></strong></p>
+ </div>
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-open-source"><i class="fas fa-code-branch"></i> Open Source</h2>
+<p>RAPIDS is an open source project. Supported by NVIDIA, it also relies on Numba, Apache Arrow, and many more open source projects. <br /> <strong><a href="community.html">Learn about our projects <i class="fas fa-angle-double-right"></i></a></strong></p>
+ </div>
+	    </div>
+	</div>
+</section>
+
+<div class="slopecap-top-down background-gray"></div>
+<section class="pure-g background-gray padding-top-1em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h1 class="section-title-halfs" id="getting-started">Getting Started</h1>
+
+<p>The RAPIDS data science framework is designed to have a familiar look and feel to data scientist working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cudf</span>
+
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">cudf</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'path/to/file.csv'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">gdf</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="n">column</span><span class="p">].</span><span class="n">mean</span><span class="p">())</span>
+
+</code></pre></div></div>
+<p>Find more details on our <strong><a href="start.html">Get Started Page <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+<h2 id="-try-now-online"><i class="fas fa-bolt"></i> Try Now Online</h2>
+<p>Jump right into a GPU powered RAPIDS notebook online with either SageMaker Studio Lab or Colab <a href="https://docs.rapids.ai/notices/rsn0014/">(v21.12 only)</a>
+.<br /></p>
+
+<p><a href="smsl.html" target="_blank" class="half-image"><img src="/assets/images/Open-StudioLab.png" alt="SageMaker Studio Lab" /></a></p>
+
+<p><a href="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&amp;offline=true&amp;sandboxMode=true" target="_blank" class="half-image"><img src="/assets/images/Open-Colab.png" alt="Colab" /></a></p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 class="section-subtitle-top-1" id="-10-minutes-to-cudf-and-dask-cudf"><i class="far fa-bookmark"></i> 10 Minutes to cuDF and Dask-cuDF</h2>
+
+<p>Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. <br /> <strong><a href="https://docs.rapids.ai/api/cudf/stable/user_guide/10min.html" target="_blank">Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+<h2 class="section-subtitle-top-1" id="-multi-gpu-with-dask-cudf"><i class="far fa-bookmark"></i> Multi-GPU with Dask-cuDF</h2>
+
+<p>A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br /> <strong><a href="https://docs.rapids.ai/api/cudf/stable/basics/dask-cudf.html" target="_blank">Go to guide <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+<h2 class="section-subtitle-top-1" id="-example-notebooks"><i class="far fa-bookmark"></i> Example Notebooks</h2>
+
+<p>A GitHub repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. <br /> <strong><a href="https://github.com/rapidsai/notebooks" target="_blank">Go to repo <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+<h2 class="section-subtitle-top-1" id="-example-community-notebooks"><i class="far fa-bookmark"></i> Example Community Notebooks</h2>
+
+<p>A second GitHub repository with our extended collection of community contributed notebook examples. <br /> <strong><a href="https://github.com/rapidsai/notebooks-contrib" target="_blank">Go to repo <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-gray padding-top-0em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="rapids-news">RAPIDS News</h1>
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-gray padding-top-1em padding-bottom-1em ">
+        <div id="medium-list" class="container-padding"></div>
+</section>
+<script>
+$.getJSON("https://rapidsai.github.io/site-data/posts.json")
+    .done(function(json) {
+
+    	var topThree = json.medium.slice(0,3)
+
+        var posts = topThree.map(function(d, i) {
+            return ('<div class="pure-u-1 pure-u-md-1-3"><a href="'+ d.mediumLink +'" target="_blank"><img src="'+ d.image +'" class="blog-image"><h2><i class="fab fa-medium"></i> '+ d.title +'</h2> <p class="post-text">'+ d.text.substring(0, 241) +'</p><p class="medium-poster"><i class="fas fa-pen"></i> post by '+d.poster+'</p></a></div>')
+        })
+
+        $('#medium-list').append(posts)
+
+    })
+    .fail(function(jqxhr, textStatus, error) {
+        console.log("Medium JSON request Failed: ", textStatus, error);
+    });
+</script>
+
+<section class="pure-g background-gray padding-top-1em padding-bottom-10em ">
+    <div id="tweet-list" class="container-padding"> </div>
+</section>
+<script>
+$.getJSON("https://rapidsai.github.io/site-data/posts.json")
+    .done(function(json) {
+
+    	var topThree = json.twitter.slice(0,3)
+
+        var tweets = topThree.map(function(d, i) {	
+            	return ('<div class="pure-u-1 pure-u-md-1-3"><a href="'+ d.tweetLink +'" target="_blank"><h2><i class="fab fa-twitter"></i> '+ d.name +'</h2><p class="tweet-text">'+ d.text.substring(0, 241) +'</p></a><p class="tweet-action"><i class="fas fa-pen"></i> '+ d.type +' by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a></p></div>')
+        })
+
+        $('#tweet-list').append(tweets)
+
+    })
+    .fail(function(jqxhr, textStatus, error) {
+        console.log("Twitter JSON request Failed: ", textStatus, error);
+    });
+</script>
+
+<div class="slopecap-top-up background-purple"></div>
+<section class="pure-g background-purple padding-top-5em padding-bottom-6em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h1 class="section-title-halfs" id="rapids-repositories">RAPIDS Repositories</h1>
+<p>RAPIDS is committed to open source. We strive to release new features on a <strong><a href="https://docs.rapids.ai/maintainers" target="_blank">2 month cadence</a></strong> with the generalized release schedule below. Learn more on our <strong><a href="https://medium.com/rapids-ai" target="_blank">Release Blogs <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+<h2 id="-release-schedule"><i class="far fa-calendar-check"></i> Release Schedule</h2>
+<svg id="Release" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 108" class="padding-top-1em padding-bottom-2em">
+    <defs>
+        <style>
+        .cls-1,
+        .cls-2 {
+            fill: none;
+            stroke: #e0e0e0;
+            stroke-width: 3px;
+        }
+        .cls-1,
+        .cls-2,
+        .cls-3 {
+            stroke-miterlimit: 10;
+        }
+
+        .cls-2 {
+            stroke-dasharray: 10.11 10.11;
+        }
+
+        .cls-3,
+        .cls-4 {
+            fill: #fff;
+        }
+
+        .cls-3 {
+            stroke: #9943ff;
+            stroke-width: 2px;
+        }
+        .cls-4 {
+            font-size: 15px;
+            font-family: sans-serif, Helvetica;
+        }
+        .cls-7 {
+            fill: #fff;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        </style>
+    </defs>
+    <title>Release Schedule</title>
+    <line class="cls-1" x1="37.36" y1="62.02" x2="320.24" y2="62.02" />
+    <line class="cls-1" x1="320.24" y1="62.02" x2="325.24" y2="62.02" />
+    <line class="cls-2" x1="335.35" y1="62.02" x2="593.08" y2="62.02" />
+    <line class="cls-1" x1="598.13" y1="62.02" x2="603.13" y2="62.02" />
+    <circle class="cls-3" cx="37.36" cy="62.02" r="16.61" />
+    <circle class="cls-3" cx="320.24" cy="62.02" r="16.61" />
+    <circle class="cls-3" cx="603.13" cy="62.02" r="16.61" />
+    <text class="cls-4" transform="translate(0 100.00)"> DEC 2021 </text>
+    <text class="cls-4" transform="translate(283.48 100.00)"> FEB 2022 </text>
+    <text class="cls-4" transform="translate(564.22 100.00)"> APR 2022 </text>
+    <text class="cls-4" transform="translate(7.00 12.00)"> LEGACY </text>
+    <text class="cls-4" transform="translate(292.00 12.00)"> STABLE </text>
+    <text class="cls-4" transform="translate(571.00 12.00)"> NIGHTLY </text>
+    <text class="cls-7" transform="translate(10.00 38.00)"> 21.12 </text>
+    <text class="cls-7" transform="translate(295.00 38.00)"> 22.02 </text>
+    <text class="cls-7" transform="translate(578.00 38.00)"> 22.04 </text>
+</svg>
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 class="section-subtitle-top-1" id="-rapids-apis-and-libraries"><i class="fas fa-code" id="libraries"></i> RAPIDS APIS and Libraries</h2>
+
+<p>RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. It also provides native array_interface support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br /> <strong><a href="about.html">Learn more <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+<h2 id="-contributing"><i class="fab fa-github"></i> Contributing</h2>
+<p>Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributing guidelines on our contributing page. <br /> <strong><a href="https://docs.rapids.ai/contributing" target="_blank">Go to Docs <i class="fas fa-angle-double-right"></i></a></strong></p>
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-purple padding-top-0em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-cudf-api"><i class="fad fa-terminal"></i> cuDF <span class="api-tag">API</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/cudf" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/cudf/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>cuDF is a Python GPU DataFrame library (built on the <strong><a href="https://arrow.apache.org/" target="_blank">Apache Arrow</a></strong> columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a <strong><a href="https://pandas.pydata.org/" target="_blank">pandas-like</a></strong> API familiar to data scientists.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-libcudf-lib"><i class="fad fa-terminal"></i> libcudf <span class="lib-tag">LIB</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/cudf" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/libcudf/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>libcudf is a CUDA C++ library for implementing standard dataframe operations. It is part of the cuDF repository.</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-purple padding-top-0em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-cuml-api"><i class="fad fa-terminal"></i> cuML <span class="api-tag">API</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/cuml" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/cuml/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/cuml/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that are compatible with other RAPIDS projects, all in a <strong><a href="https://scikit-learn.org/stable/index.html" target="_blank">scikit-learn-like</a></strong> API familiar to data scientists.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-cugraph-api"><i class="fad fa-terminal"></i> cuGraph <span class="api-tag">API</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/cugraph" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/cugraph/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/cugraph/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>cuGraph is a GPU accelerated graph analytics library, with functionality like <strong><a href="https://networkx.github.io/" target="_blank">NetworkX</a></strong>, which is seamlessly integrated into the RAPIDS data science platform.</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-purple padding-top-0em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-cusignal-api"><i class="fad fa-terminal"></i> cuSignal <span class="api-tag">API</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/cusignal" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/cusignal/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/cusignal/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>cuSignal is a GPU accelerated signal processing library built around a <strong><a href="https://docs.scipy.org/doc/scipy/reference/signal.html" target="_blank">SciPy Signal-like</a></strong> API, CuPy, and custom Numba and CuPy CUDA kernels. cuSignal is written exclusively in Python and demonstrates GPU speeds without a C++ software layer.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-cuspatial-api"><i class="fad fa-terminal"></i> cuSpatial <span class="api-tag">API</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/cuspatial" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/cuspatial/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations.</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-purple padding-top-0em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-cuxfilter-api"><i class="fad fa-terminal"></i> cuxfilter <span class="api-tag">API</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/cuxfilter" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/cuxfilter/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/cuxfilter/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the JavaScript library <strong><a href="https://github.com/crossfilter/crossfilter" target="_blank">crossfilter</a></strong>, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via <strong><a href="https://github.com/rapidsai/cudf" target="_blank">cuDF</a></strong>.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-clx-api"><i class="fad fa-terminal"></i> CLX <span class="api-tag">API</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/clx" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/clx/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/clx/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>Cyber Log Accelerators (CLX), also pronounced “clicks”, provides a collection of RAPIDS examples for security analysts, data scientists, and engineers to quickly get started applying RAPIDS and GPU acceleration to real-world cybersecurity use cases.</p>
+ </div>
+    </div>
+</section>
+<section class="pure-g background-purple padding-top-0em padding-bottom-6em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-rmm-lib"><i class="fad fa-terminal"></i> RMM <span class="lib-tag">LIB</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/rmm" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/rmm/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/rmm/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-cucim-api"><i class="fad fa-terminal"></i> cuCIM <span class="lib-tag">API</span></h2>
+
+<p class="no-tb-margins"><strong><a href="https://github.com/rapidsai/cucim" target="_blank">GitHub</a></strong> <strong>/</strong> <strong><a href="https://docs.rapids.ai/api/cucim/stable/" target="_blank">Docs</a></strong> <strong>/</strong> <strong><a href="https://github.com/rapidsai/cucim/blob/main/CHANGELOG.md" target="_blank">Change Log</a></strong></p>
+
+<p>cuCIM is a an extensible toolkit designed to provide GPU-accelerated I/O, computer vision and image processing primitives for N-Dimensional images with a focus on biomedical imaging.  Our API mirrors <a href="https://scikit-image.org/">scikit-image</a> for image manipulation and <a href="https://openslide.org/">OpenSlide</a> for image loading.</p>
+
+ </div>
+    </div>
+</section>
+<div class="slopecap-bottom-down background-purple"></div>
+
+<h1 class="section-title-full padding-top-1em" id="community-and-projects">Community and Projects</h1>
+
+<section class="background-white padding-top-2em padding-bottom-0em">
+    <div class="pure-g ">
+        <div class="container-padding">
+            <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/RAPIDS-SQL.png" alt="RAPIDS+SQL" class="third-image-center" /></p>
+<h2 id="-rapids--sql"><i class="fas fa-code-branch"></i> RAPIDS + SQL</h2>
+
+<p>RAPIDS integrates with Spark SQL and Dask-SQL to accelerate your SQL queries at scale and make GPU acceleration available to an even broader set of users.
+<br /> <strong><a href="https://developer.nvidia.com/blog/accelerating-apache-spark-3-0-with-gpus-and-rapids/">Learn more about RAPIDS + Spark SQL <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong>
+<br /> <strong><a href="https://dask-sql.readthedocs.io/en/latest/">Learn more about RAPIDS + Dask SQL <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+            <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/dask_logo.png" alt="Dask" class="third-image-center" /></p>
+<h2 id="-rapids--dask"><i class="fas fa-code-branch"></i> RAPIDS + Dask</h2>
+
+<p>Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br /> <strong><a href="dask.html">Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="container-padding">
+            <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/xgboost_logo.png" alt="xgboost" class="third-image-center" /></p>
+<h2 id="-rapids--xgboost"><i class="fas fa-code-branch"></i> RAPIDS + XGBoost</h2>
+
+<p>XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work together. <br /> <strong><a href="xgboost.html">Learn more on our XGBoost page <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+            <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/RAPIDS-cloud.png" alt="cloud" class="third-image-center" /></p>
+<h2 id="-rapids--cloud"><i class="fas fa-code-branch"></i> RAPIDS + Cloud</h2>
+
+<p>RAPIDS’ GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+<br />
+<strong><a href="cloud.html">Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+ </div>
+         </div>
+    </div>
+</section>
+<section class="background-white padding-top-2em padding-bottom-0em">
+    <div class="pure-g ">
+        <div class="container-padding">
+            <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/Plotly_Dash_logo.png" alt="Plotly" class="third-image-center" /></p>
+<h2 id="-rapids--plotly-dash"><i class="fas fa-code-branch"></i> RAPIDS + Plotly Dash</h2>
+
+<p>Plotly’s Dash enables Data Science teams to focus on the data and models, while producing and sharing enterprise-ready analytic apps that sit on top of RAPIDS-accelerated Python dataframes. <br /> <strong><a href="plotly.html">Learn more on our Plotly page <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+            <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/csp+hpo.png" alt="HPO" class="third-image-center" /></p>
+<h2 id="-rapids--hpo"><i class="fas fa-code-branch"></i> RAPIDS + HPO</h2>
+
+<p>Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works closely with major cloud providers and open source hyperparameter optimization solutions to ensure smooth integration and high performance, regardless of your deployment platform. <br /> <strong><a href="hpo.html">Learn more on our HPO page <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+        </div>
+    </div>
+    <div class="pure-g">
+        <div class="container-padding">
+            <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/NVLogo_2D_H.png" alt="merlin" class="third-image-center" /></p>
+<h2 id="-rapids--nvidia-merlin"><i class="fas fa-code-branch"></i> RAPIDS + NVIDIA MERLIN</h2>
+
+<p>NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDS cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br /> <strong><a href="merlin.html">Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+            <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/slurm-logo.png" alt="slurm" class="third-image-center" /></p>
+<h2 id="-rapids--hpc"><i class="fas fa-code-branch"></i> RAPIDS + HPC</h2>
+
+<p>RAPIDS works extremely well in traditional HPC environments where GPUs are often co-located with accelerated networking hardware such as InfiniBand.
+<br /> <strong><a href="/hpc">Learn more on our HPC page <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+         </div>
+    </div>
+</section>
+<section class="pure-g background-white padding-top-0em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/spark-logo-trademark.png" alt="spark" class="third-image-center" /></p>
+<h2 id="-rapids--spark"><i class="fas fa-code-branch"></i> RAPIDS + Spark</h2>
+
+<p>NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
+<br /> <strong><a href="https://nvidia.github.io/spark-rapids/" target="_blank">Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/assets/images/MONAI-logo_color.png" alt="monai" class="third-image-center" /></p>
+<h2 id="-rapids--monai"><i class="fas fa-code-branch"></i> RAPIDS + MONAI</h2>
+
+<p>The Medical Open Network for AI (<a href="https://monai.io/">MONAI</a>) has been named by some the PyTorch of healthcare.
+RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelerate the data pathology training pipeline on GPU.
+<br /> <strong><a href="https://docs.monai.io/en/latest/highlights.html">Learn more on MONAI latest highlights <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></strong></p>
+
+ </div>
+    </div>
+</section>
+
+<h1 class="section-title-full" id="contributors">Contributors</h1>
+<section class="container-logo-flex padding-top-0em padding-bottom-5em">
+    <div class="logo-flex">
+        <a href="https://www.anaconda.com/anaconda-community/" target="_blank"> <img src="/assets/images/anaconda.png" alt="anaconda" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://blazingsql.com/" target="_blank"> <img src="/assets/images/blazingsql.png" alt="blazingsql" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://github.com/capitalone" target="_blank"> <img src="/assets/images/capital_one_logo.png" alt="capitalOne" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://github.com/chainer" target="_blank"> <img src="/assets/images/Chainer-logo.png" alt="chainer" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://cupy.chainer.org/" target="_blank"> <img src="/assets/images/cupy-logo.png" alt="cuPY" /> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://github.com/deepwavedigital" target="_blank"> <img src="/assets/images/deepwave-digital.png" alt="deepwave-digital" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://gunrock.github.io/docs/" target="_blank"> <img src="/assets/images/Gunrock_Color.png" alt="gunrock" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://developer.nvidia.com/open-source" target="_blank"> <img src="/assets/images/NVLogo_2D_H.png" alt="nvidia" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://github.com/quansight-labs" target="_blank"> <img src="/assets/images/quansight.png" alt="quantsight" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://www.linkedin.com/company/walmartglobaltech/" target="_blank"> <img src="/assets/images/Walmart-Global-Tech-Logo.png" alt="walmart Global Tech" /> </a>
+    </div>
+</section>
+
+<h1 class="section-title-full" id="adopters">Adopters</h1>
+<section class="container-logo-flex padding-top-0em padding-bottom-5em">
+    <div class="logo-flex">
+       <a href="https://anyscale.com/" target="_blank"> <img src="/assets/images/Anyscale-logo.png" alt="anyscale" /> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://www.boozallen.com" target="_blank"> <img src="/assets/images/booz-allen-hamilton-logo.png" alt="booz-allen-hamilton" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://github.com/capitalone" target="_blank"> <img src="/assets/images/capital_one_logo.png" alt="capitalOne" /> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://github.com/databricks" target="_blank"> <img src="/assets/images/databricks-logo.png" alt="databricks" /> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://www.deepwavedigital.com" target="_blank"> <img src="/assets/images/deepwave-digital.png" alt="deepwave-digital" /> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://github.com/graphistry" target="_blank"> <img src="/assets/images/graphistry.png" alt="graphistry" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://github.com/h2oai" target="_blank"> <img src="/assets/images/gpu-ventures-h2o-ai-logo.png" alt="h20ai" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://ibm.github.io/" target="_blank"> <img src="/assets/images/ibm-logo.png" alt="ibm" /> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://www.iguazio.com/docs/" target="_blank"> <img src="/assets/images/iguazio_logo.png" alt="iguzaio" /> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://github.com/INRIA" target="_blank"> <img src="/assets/images/inria-logo.png" alt="inria" /> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://github.com/kineticadb" target="_blank"> <img src="/assets/images/kinetica_logo.png" alt="kinetica" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://github.com/mapr/" target="_blank"> <img src="/assets/images/MapR_Color.png" alt="mapr" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://github.com/Omnisci" target="_blank"> <img src="/assets/images/omni_sci_logo.png" alt="omnisci" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://plotly.com/dash/" target="_blank"> <img src="/assets/images/Plotly_Dash_logo.png" alt="plotly dash" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://www.preferred-networks.jp/en/" target="_blank"> <img src="/assets/images/PFN-logo.png" alt="preferred-networks" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://pytorch.org/" target="_blank"> <img src="/assets/images/PyTorch_logo.png" alt="pytorch" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://ray.io/" target="_blank"> <img src="/assets/images/ray-logo.png" alt="ray" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://www.saturncloud.io" target="_blank"> <img src="/assets/images/saturn-cloud-logo.png" alt="saturn-cloud" /> </a>
+     </div>
+    <div class="logo-flex">
+        <a href="https://github.com/uber" target="_blank"> <img src="/assets/images/uber_logo_2018.png" alt="uber" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://ursalabs.org/" target="_blank"> <img src="/assets/images/ursa_logo.png" alt="ursa" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://corporate.walmart.com/tech" target="_blank"> <img src="/assets/images/Walmart-logo.png" alt="walmart" /> </a>
+    </div>
+	<div class="logo-flex">
+        <a href="https://paperspace.com" target="_blank"> <img src="/assets/images/paperspace_small.png" alt="walmart" /> </a>
+    </div>
+</section>
+
+<h1 class="section-title-full" id="open-source">Open Source</h1>
+<section class="container-logo-flex padding-top-0em padding-bottom-10em">
+    <div class="logo-flex">
+        <a href="https://arrow.apache.org/" target="_blank"> <img src="/assets/images/apache-arrow_Color.png" alt="Apache Arrow" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://blazingsql.com/" target="_blank"> <img src="/assets/images/blazingsql.png" alt="blazingsql" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://dask.org/" target="_blank"> <img src="/assets/images/dask_logo.png" alt="Dask" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="http://gpuopenanalytics.com/" target="_blank"> <img src="/assets/images/GoAi_logo.png" alt="GoAi" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://nuclio.io" target="_blank"> <img src="/assets/images/nuclio-logo.png" alt="nuclio" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://numba.pydata.org/" target="_blank"> <img src="/assets/images/numba_logo.png" alt="Numba" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://scikit-learn.org/stable/index.html" target="_blank"> <img src="/assets/images/scikit-learn_Color.png" alt="scikitlearn" /> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://xgboost.ai/" target="_blank"> <img src="/assets/images/xgboost_logo.png" alt="XGboost" /> </a>
+    </div>
+</section>
+
+<div class="slopecap-top-up background-darkpurple"></div>
+<section class="footer-cta-main">
+    <h2>Experience Data Science on GPUs with RAPIDS</h2>
+    
+    
+      <a href="/start.html" class="blue-btn">
+    
+      GET STARTED</a>
+</section>
+
+
+
+<footer>
+    <a href="/"><img class="footer-logo" src="/assets/images/footer-logo.svg" alt="rapids"></a>
+    <div class="copy-date">© 2022 RAPIDS</div>
+    <div class="footer-nav">
+        <ul>
+            <li><a href="/about.html">ABOUT</a></li>
+            <li><a href="/start.html">GET STARTED</a></li>
+            <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+            <li><a href="https://docs.rapids.ai/" target="_blank">DOCS</a></li>
+            <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+            <li>
+                <br>
+                <a href="/community.html">COMMUNITY</a>
+                <br>
+                <a href="/blazingsql.html">BLAZINGSQL</a> |
+                <a href="/cloud.html">CLOUD</a> |
+                <a href="/dask.html">DASK</a> |
+                <a href="/hpc.html">HPC</a> |
+                <a href="/hpo.html">HPO</a> |
+                <a href="/merlin.html">MERLIN</a> |
+                <a href="/plotly.html">PLOTLY</a> |
+                <a href="/xgboost.html">XGBOOST</a>
+                <br> <br>
+                <a href="/citations.html">CITATIONS</a> |
+                <a href="/branding.html">BRANDING AND GUIDES</a>
+            </li>
+            <li>
+                <br>
+                <a class="footer-icon" href="mailto:RAPIDSai@googlegroups.com"><i class="fas fa-envelope fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://twitter.com/rapidsai" target="_blank"><i class="fab fa-twitter fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ" target="_blank"><i class="fab fa-slack fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://stackoverflow.com/tags/rapids" target="_blank"><i class="fab fa-stack-overflow fa-2x dark-purple-font"></i></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127041178-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127041178-1');
+</script>
+
+<script type="text/javascript">
+	if(typeof _satellite == "object")
+		_satellite.pageBottom();
+	else console.log("Adobe Analytics Likely AdBlocked. ");
+</script>
+</body>
+</html> 
