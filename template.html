@@ -3,41 +3,41 @@
 <!-- REQUIRED FOR EVERY PAGE -->
 
 <head>
-    <meta charset="utf-8">
-    <title>RAPIDS.ai | GPU accelerated data science</title>
-    <meta name="description" content="RAPIDS.ai | GPU accelerated data science">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>RAPIDS.ai | GPU accelerated data science</title>
+  <meta name="description" content="RAPIDS.ai | GPU accelerated data science">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="RAPIDS.ai | GPU accelerated data science">
-    <meta property="og:description" content="Open source GPU accelerated data science libraries">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rapids.ai/">
-    <meta property="og:image" content="img/RAPIDS-logo-white.png">
+  <meta property="og:title" content="RAPIDS.ai | GPU accelerated data science">
+  <meta property="og:description" content="Open source GPU accelerated data science libraries">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rapids.ai/">
+  <meta property="og:image" content="img/RAPIDS-logo-white.png">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="https://rapids.ai/" />
-    <meta name="twitter:title" content="RAPIDS.ai | GPU accelerated data science" />
-    <meta name="twitter:description" content="Open source GPU accelerated data science libraries" />
-    <meta name="twitter:image" content="img/RAPIDS-logo-white.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="https://rapids.ai/" />
+  <meta name="twitter:title" content="RAPIDS.ai | GPU accelerated data science" />
+  <meta name="twitter:description" content="Open source GPU accelerated data science libraries" />
+  <meta name="twitter:image" content="img/RAPIDS-logo-white.png" />
 
-    <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-512x512.png">
 
-    <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="css/custom.css">
 
-    <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#fafafa">
 
-    <script src="https://kit.fontawesome.com/1690513e32.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
 </head>
 
 <body>
-    <!-- Inserts header.html template -->
-    <div x-data="{ header: '' }" x-init="
+  <!-- Inserts header.html template -->
+  <div x-data="{ header: '' }" x-init="
     fetch('header.html')
     .then(data => { 
       if (data.ok) {
@@ -48,15 +48,164 @@
     })
     .then(data => {header = data})
     .catch(error => {console.error(error)})">
-        <div x-html="header"></div>
+    <nav x-html="header"></nav>
+  </div>
+
+  <!-- Hero Header-->
+  <section class="hero is-medium hero-rapids-bg ">
+    <div class="hero-body has-text-centered">
+      <p class="title">
+        Medium hero
+      </p>
+      <p class="subtitle">
+        Medium subtitle
+      </p>
+    </div>
+    <div class="slant-up-container">
+      <div class="slant-up has-background-white"></div>
     </div>
 
-    <section class="section">
+  </section>
 
-    </section>
+  <!-- Single Col -->
+  <section class="section">
+    <div class="container">
 
-    <!-- Inserts footer.html template -->
-    <div x-data="{ footer: '' }" x-init="
+      <div class="columns">
+        <div class="column is-full">
+          <h1 class="title is-1 has-text-centered">Single Col Centered</h1>
+          <p class="has-text-centered"> Leverage agile frameworks to provide a robust synopsis for high level overviews.
+            Iterative approaches to corporate strategy foster collaborative thinking to further the overall value
+            proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and
+            empowerment.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-full">
+          <h1 class="title is-1">Single Col</h1>
+          <p> Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+            the holistic world view of disruptive innovation via workplace diversity and empowerment.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Double Col -->
+  <section class="section">
+    <div class="container">
+
+      <div class="columns">
+        <div class="column is-full">
+          <h1 class="title is-1">Double Col</h1>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-half">
+          <h2 class="title is-2">Header</h2>
+          <p> Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+            the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+        </div>
+        <div class="column is-half">
+          <h2 class="title is-2">Header</h2>
+          <p> Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+            the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tripple Col -->
+  <section class="section">
+    <div class="container">
+
+      <div class="columns">
+        <div class="column is-full">
+          <h1 class="title is-1">Tripple Col</h1>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-one-third">
+          <h2 class="title is-2">Header</h2>
+          <p> Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+            the
+            holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+        </div>
+        <div class="column is-one-third">
+          <h2 class="title is-2">Header</h2>
+          <p> Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+            the
+            holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+        </div>
+        <div class="column is-one-third">
+          <h2 class="title is-2">Header</h2>
+          <p> TLeverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
+            corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
+            the
+            holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Slant Up Purple w/ BG Color -->
+  <div class="slant-up-container">
+    <div class="slant-up has-background-rapids-purple-primary"></div>
+  </div>
+
+  <section class="section has-background-rapids-purple-primary">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-full">
+          <h1 class="title is-1 has-text-white">Purple Section Slant</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="slant-down-container">
+    <div class="slant-down has-background-rapids-purple-primary"></div>
+  </div>
+
+  <!-- Slant Up Grat w/ BG Color -->
+  <div class="slant-up-container">
+    <div class="slant-up has-background-light"></div>
+  </div>
+
+  <section class="section has-background-light">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-full">
+          <h1 class="title is-1">Gray Section Slant</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="slant-down-container">
+    <div class="slant-down has-background-light"></div>
+  </div>
+
+
+  <!-- Inserts adopters.html template -->
+  <!-- Inserts contributors.html template -->
+  <!-- Inserts opensource.html template -->
+
+  <!-- Inserts footer.html template -->
+  <div x-data="{ footer: '' }" x-init="
     fetch('footer.html')
     .then(data => { 
       if (data.ok) {
@@ -67,10 +216,11 @@
     })
     .then(data => {footer = data})
     .catch(error => {console.error(error)})">
-        <div x-html="footer"></div>
-    </div>
+    <footer x-html="footer"></footer>
+  </div>
 
-    <script src="js/main.js"></script>
+  <!-- Everything else -->
+  <script src="js/main.js"></script>
 
 </body>
 
