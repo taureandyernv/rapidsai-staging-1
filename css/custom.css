@@ -31,12 +31,76 @@ body {
   background-color: #fff;
 }
 
-h1, h2, h1.title, h2.title {
+.title:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+h1, h2, h3 {
   color: #7306ff;
   font-weight: 300;
   letter-spacing: normal;
   font-family: sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+
+/* /// button style /// */
+button {
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  border-style: solid;
+  border-color: #dbdbdb;
+  color: white;
+  border-width: 3px;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+  font-weight: 600;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+}
+
+button:hover{
+  border-style: inset;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 1px 2px rgba(0,0,0,0.08) inset;
+}
+
+.button-rapids-white {
+  color: white;
+  border-color: #dbdbdb;
+}
+
+.button-rapids-purple {
+  color: #7400ff;
+  border-color: #7400ff;
+}
+
+.button-rapids-teal {
+  color: #36c9dd;
+  border-color: #36c9dd;
+}
+
+
 
 /* /// navbar /// */
 .navbar-item img {
@@ -61,26 +125,63 @@ h1, h2, h1.title, h2.title {
   min-height: 300px;
 }
 
+.hero-img{
+  width: 225px;
+  margin:0 auto;
+}
+
+.hero-body{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
 
 /* /// slant graphics /// */
 /* https://css-tricks.com/using-box-shadows-and-clip-path-together/ */
 .slant-up-container{
   filter: drop-shadow(0px -3px 2px rgba(0, 0, 0, 0.2));
 }
-.slant-up{
-  height: 150px;
+.top-slant-up{
+  height: 4.1rem;
+  margin-top: -4rem;
+  margin-bottom: -0.1rem;
   clip-path: polygon(0 100%, 0 80%, 100% 0, 100% 100%);
+}
+
+.top-slant-down{
+  height: 4.1rem;
+  margin-top: -4rem;
+  margin-bottom: -0.1rem;
+  clip-path: polygon(0 100%, 100% 100%, 100% 80%, 0 0);
 }
 
 .slant-down-container{
   filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.2));
 }
-.slant-down{
-  height: 150px;
-  clip-path: polygon(0 0, 0 20%, 100% 100%, 100% 0);
+
+.bottom-slant-up{
+  height: 4.1rem;
+  margin-bottom: -4rem;
+  margin-top: -0.1rem;
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0% 100%);
+}
+
+.bottom-slant-down{
+  height: 4.1rem;
+  margin-bottom: -4rem;
+  margin-top: -0.1rem;
+  clip-path: polygon(0 0, 0 80%, 100% 100%, 100% 0);
+}
+
+.padding-bottom-slant{
+  padding-bottom: 6rem;
 }
 
 /* /// colors /// */
+.has-background-rapids-gray{
+  background-color: #eeeeee;
+}
+
+
 .has-background-rapids-purple-primary{
   background-color: #7400ff;
 }
