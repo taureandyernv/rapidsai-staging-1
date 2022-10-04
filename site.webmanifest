@@ -1,10 +1,10 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "RAPIDS",
+  "name": "RAPIDS.ai",
   "icons": [{
     "src": "icon.png",
     "type": "image/png",
-    "sizes": "192x192"
+    "sizes": "512x512"
   }],
   "start_url": "/?utm_source=homescreen",
   "background_color": "#fafafa",

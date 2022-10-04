@@ -3,32 +3,26 @@
    Overrides for base Bluma.css
    =========================== */
 
-/* adds menu transition */
-@media screen and (max-width: 1023px) {
-  .navbar-menu {
-    background-color: #7400ff;
-    display: block;
-    padding: 0;
-    height: 0;
-    transition: height 0.5s ease;
-  }
-  .navbar-menu.is-active {
-    display: block;
-    height: 19rem;
-    transition: height 0.5s ease;
-  }
-  .navbar.is-fixed-top .navbar-menu, .navbar.is-fixed-top-touch .navbar-menu {
-    overflow: hidden;
-  }
-}
 
-
-/* /// general /// */
+   /* /// general /// */
 body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
+  color: #212121;
+  line-height: 1.6;
+}
+
+a{
+  color: #37c9dd;
+  cursor: pointer;
+  font-weight: 700;
+  transition: color 0.4s ease-out;
+}
+a:hover{
+  color: #30acbc;
+  transition: color 0.4s ease-out;
 }
 
 .title:not(:last-child) {
@@ -57,6 +51,41 @@ h3 {
 }
 
 
+/* /// menu size transitions /// */
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: #7400ff;
+    display: block;
+    padding: 0;
+    height: 0;
+    transition: height 0.5s ease;
+  }
+  .navbar-menu.is-active {
+    display: block;
+    height: 19rem;
+    transition: height 0.5s ease;
+  }
+  .navbar.is-fixed-top .navbar-menu, .navbar.is-fixed-top-touch .navbar-menu {
+    overflow: hidden;
+  }
+}
+
+
+/* /// navbar /// */
+.navbar-item img {
+  max-height: 2.5rem;
+}
+
+.navbar-start a.has-text-white:focus, .navbar-start a.has-text-white:hover {
+  background-color: inherit;
+  color: #b49fd6 !important;
+  transition: color 0.2s ease-out;
+}
+
+.navbar.has-shadow {
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
 /* /// button style /// */
 button {
   background-color: transparent;
@@ -77,17 +106,26 @@ button {
   font-weight: 600;
   font-family: 'Open Sans';
   text-transform: uppercase;
+  transition: all 0.55s ease-out;
+
+  /* spent too much time on this */
+  box-shadow:
+  0 1px 2px rgba(0, 0, 0, 0.05),
+  0 3px 5px rgba(0, 0, 0, 0.07),
+  0 6px 10px rgba(0, 0, 0, 0.1),
+  0 3px 5px rgba(0, 0, 0, 0.2) inset;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 button:hover{
-  border-style: inset;
-  background-color: rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 1px 2px rgba(0,0,0,0.08) inset;
+  text-shadow: none;
+  box-shadow: none;
+  transition: all 0.35s ease-out;
 }
 
 .button-rapids-white {
   color: white;
-  border-color: #dbdbdb;
+  border-color: white;
 }
 
 .button-rapids-purple {
@@ -96,31 +134,14 @@ button:hover{
 }
 
 .button-rapids-teal {
-  color: #36c9dd;
-  border-color: #36c9dd;
-}
-
-
-
-/* /// navbar /// */
-.navbar-item img {
-  max-height: 2.5rem;
-}
-
-.navbar-start a.has-text-white:focus, .navbar-start a.has-text-white:hover {
-  background-color: inherit;
-  color: #b49fd6 !important;
-  transition: color 0.3s ease-in;
-}
-
-.navbar.has-shadow {
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+  color: #1ebdd2;
+  border-color: #1ebdd2;
 }
 
 
 /* /// hero /// */
 .hero-rapids-bg{
-  background: url(../img/header-bg.svg) top center no-repeat;
+  background: url(../images/header-bg.svg) top center no-repeat;
   background-size: cover;
   min-height: 300px;
 }
@@ -173,8 +194,68 @@ button:hover{
 }
 
 .padding-bottom-slant{
-  padding-bottom: 6rem;
+  padding-bottom: 9rem;
 }
+
+.padding-top-slant{
+  padding-top: 9rem;
+}
+
+
+/* /// tweets /// */
+.post-text{
+  color:#636363;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-action{
+  color:#4d4d4c;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-variant: all-small-caps;
+}
+
+/* /// images /// */
+.img-center {
+  margin:0 auto;
+}
+
+.img-half {
+  width: 50%;
+}
+
+.img-third {
+  width: 33%;
+}
+
+.img-quarter {
+  width: 25%;
+}
+
+.img-w100 {
+  width: 100px;
+}
+
+.img-w150 {
+  width: 150px;
+}
+
+.img-w200 {
+  width: 200px;
+}
+
+.img-w250 {
+  width: 250px;
+}
+
+
+.img-w400 {
+  width: 400px;
+}
+
 
 /* /// colors /// */
 .has-background-rapids-gray{
