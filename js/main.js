@@ -1,1 +1,1 @@
-console.log("main js start")
+console.log("// GPUs FTW")
