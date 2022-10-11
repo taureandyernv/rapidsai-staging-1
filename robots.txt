@@ -2,4 +2,6 @@
 
 # Allow crawling of all content
 User-agent: *
-Disallow:
+Disallow: /includes
+Disallow: blank.html
+Disallow: template.html

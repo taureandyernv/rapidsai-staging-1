@@ -41,10 +41,12 @@ h1, h2, h3 {
 
 h1 {
   font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 h2 {
   font-size: 1.7rem;
+  line-height: 2.5rem;
 }
 
 h3 {
@@ -286,6 +288,10 @@ button:hover{
   margin:0 auto;
 }
 
+.img-full {
+  width: 100%;
+}
+
 .img-half {
   width: 50%;
 }
@@ -313,7 +319,6 @@ button:hover{
 .img-w250 {
   width: 250px;
 }
-
 
 .img-w400 {
   width: 400px;

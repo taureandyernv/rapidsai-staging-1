@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="">
-<!-- REQUIRED FOR EVERY PAGE -->
 
+<!-- REQUIRED FOR EVERY PAGE -->
 <head>
   <meta charset="utf-8">
   <title>RAPIDS.ai | GPU accelerated data science</title>
@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Open source GPU accelerated data science libraries" />
   <meta name="twitter:image" content="images/RAPIDS-logo-white.png" />
 
-  <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png">
 
   <link rel="manifest" href="manifest.json">
 
@@ -36,43 +36,41 @@
 </head>
 
 <body>
-  <!-- Inserts header.html template -->
-  <nav x-data="{ header: '' }" x-init="
-    fetch('header.html')
+  <!-- Inserts nav.html template -->
+  <nav x-data="{ nav: '' }" x-init="
+    fetch('includes/nav.html')
     .then(data => { 
       if (data.ok) {
         return data.text()
       }
-      header = '' // load blank
+      nav = '' // load blank
       throw new Error('Failed to load header.html')
     })
-    .then(data => {header = data})
+    .then(data => {nav = data})
     .catch(error => {console.error(error)})">
-    <nav x-html="header"></nav>
+    <nav x-html="nav"></nav>
   </nav>
 
   <!-- Hero Header-->
   <section class="hero is-medium hero-rapids-bg mb-5">
     <div class="hero-body has-text-centered">
-      <img class="hero-img" src="/images/rapids-logo-whitetxt.svg">
+      <img class="hero-img" src="images/rapids-logo-whitetxt.svg">
       <p class="title has-text-white">
         Open Source GPU Data Science
       </p>
-      <button class="button-rapids-teal">Get Started</button>
+      <button class="button-rapids-teal"><a href="#">Get Started</a></button>
     </div>
     <div class="slant-up-container">
       <div class="top-slant-up has-background-white"></div>
     </div>
-
   </section>
 
   <!-- Single Col -->
   <section class="section">
     <div class="container">
-
+      <h1 class="has-text-centered">Single Col Centered</h1>
       <div class="columns">
         <div class="column is-full">
-          <h1 class="has-text-centered">Single Col Centered</h1>
           <p class="subtitle has-text-centered"> Subtitle: Leverage agile frameworks to provide a robust synopsis for
             high level
             overviews.
@@ -87,9 +85,9 @@
 
   <section class="section">
     <div class="container">
+      <h1>Single Col</h1>
       <div class="columns">
         <div class="column is-full">
-          <h1>Single Col</h1>
           <p> Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to
             corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow
             the holistic world view of disruptive innovation via workplace diversity and empowerment.
@@ -110,17 +108,14 @@
             empowerment.
             <a href="#">Try Out Now <i class="fa-solid fa-arrow-up-right"></i> </a>
           </p>
-
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Double Col -->
   <section class="section">
     <div class="container">
-
       <h1>Double Col</h1>
       <div class="columns">
         <div class="column is-half">
@@ -136,16 +131,13 @@
             the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Tripple Col -->
   <section class="section">
     <div class="container">
-
       <h1>Tripple Col</h1>
-
       <div class="columns">
         <div class="column is-one-third">
           <h2><i class="fa-light fa-square-code"></i> Header</h2>
@@ -168,19 +160,18 @@
             the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- Special Cases -->
   <section class="section padding-bottom-slant">
     <div class="container">
-
       <h1>Special Cases</h1>
       <div class="columns">
         <div class="column is-half">
           <h2><i class="fa-light fa-square-code icon"></i> Code Block</h2>
           <p> Example code:</p>
+          <!-- Code samples must use <pre><code> tags together, specific code highlight must be in <span> tags -->
           <pre class="highlight"><code>git clone https://github.com/rapidsai/notebooks.git git submodule update --init --remote --no-single-branch --depth 1</code></pre>
         </div>
         <div class="column is-1">
@@ -188,7 +179,7 @@
           <p>Iterative corporate strategy. </p>
         </div>
         <div class="column is-1">
-          <h2>  1 Col </h2>
+          <h2> 1 Col </h2>
           <p>Collaborative thinking. </p>
         </div>
         <div class="column is-2">
@@ -201,16 +192,27 @@
         </div>
       </div>
 
-
       <div class="columns">
         <div class="column is-one-full">
           <h2>Common Icons</h2>
-          <h2> 
-            <i class="fa-brands fa-python"></i> <i class="fa-brands fa-windows"></i> <i class="fa-brands fa-docker"></i> <i class="fa-brands fa-ubuntu"></i> <i class="fa-brands fa-github"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-slack"></i> <i class="fa-brands fa-stack-overflow"></i>
-            <i class="fa-regular fa-code-branch"></i> <i class="fa-regular fa-code"></i> <i class="fa-light fa-square-terminal"></i> <i class="fa-light fa-file-code"></i> <i class="fa-light fa-square-code"></i> 
-            <i class="fa-light fa-download"></i> <i class="fa-regular fa-cloud-arrow-down"></i> <i class="fa-regular fa-cloud"></i>  <i class="fa-regular fa-list-check"></i> <i class="fa-light fa-maximize"></i> <i class="fa-solid fa-arrow-up-right"></i> <i class="fa-regular fa-user-group"></i> 
-            <i class="fa-light fa-computer"></i>  <i class="fa-light fa-microchip"></i> <i class="fa-light fa-memory"></i>  <i class="fa-light fa-laptop-code"></i> <i class="fa-light fa-server"></i>  <i class="fa-light fa-microchip-ai"></i> <i class="fa-regular fa-caret-down"></i> <i class="fa-regular fa-caret-right"></i>
-            <i class="fa-regular fa-bolt"></i> <i class="fa-regular fa-arrow-pointer"></i>   <i class="fa-regular fa-circle-check"></i> <i class="fa-regular fa-circle-info"></i> <i class="fa-regular fa-bookmark"></i> <i class="fa-regular fa-flag-swallowtail"></i> 
+          <h2>
+            <i class="fa-brands fa-python"></i> <i class="fa-brands fa-windows"></i> <i class="fa-brands fa-docker"></i>
+            <i class="fa-brands fa-ubuntu"></i> <i class="fa-brands fa-github"></i> <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-slack"></i> <i class="fa-brands fa-stack-overflow"></i>
+            <i class="fa-regular fa-code-branch"></i> <i class="fa-regular fa-code"></i> <i
+              class="fa-light fa-square-terminal"></i> <i class="fa-light fa-file-code"></i> <i
+              class="fa-light fa-square-code"></i>
+            <i class="fa-light fa-download"></i> <i class="fa-regular fa-cloud-arrow-down"></i> <i
+              class="fa-regular fa-cloud"></i> <i class="fa-regular fa-list-check"></i> <i
+              class="fa-light fa-maximize"></i> <i class="fa-solid fa-arrow-up-right"></i> <i
+              class="fa-regular fa-user-group"></i>
+            <i class="fa-light fa-computer"></i> <i class="fa-light fa-microchip"></i> <i
+              class="fa-light fa-memory"></i> <i class="fa-light fa-laptop-code"></i> <i class="fa-light fa-server"></i>
+            <i class="fa-light fa-microchip-ai"></i> <i class="fa-regular fa-caret-down"></i> <i
+              class="fa-regular fa-caret-right"></i>
+            <i class="fa-regular fa-bolt"></i> <i class="fa-regular fa-arrow-pointer"></i> <i
+              class="fa-regular fa-circle-check"></i> <i class="fa-regular fa-circle-info"></i> <i
+              class="fa-regular fa-bookmark"></i> <i class="fa-regular fa-flag-swallowtail"></i>
           </h2>
         </div>
       </div>
@@ -258,7 +260,6 @@
   <section class="section has-background-rapids-gray padding-bottom-slant">
     <div class="container">
       <h1>Gray Slant Section</h1>
-
       <div class="columns">
         <div class="column is-half">
           <h2><i class="fa-light fa-square-code icon"></i> Header</h2>
@@ -267,8 +268,6 @@
             the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
 
           <a href="#"><button class="button-rapids-purple mt-3">Purple button</button></a>
-
-
         </div>
         <div class="column is-half">
           <h2><i class="fa-light fa-square-code icon"></i> Header</h2>
@@ -289,54 +288,52 @@
   <!-- Images -->
   <section class="section padding-top-slant">
     <div class="container">
-
       <h1>Image Layouts</h1>
-
       <div class="columns">
         <div class="column is-one-third">
           <h3 class="has-text-centered">1/2 size center</h3>
-          <img class="image img-half img-center" src="../images/RAPIDS-cloud.png">
+          <img class="image img-half img-center" src="images/RAPIDS-cloud.png">
         </div>
         <div class="column is-one-third">
           <h3 class="has-text-centered">1/2 size center</h3>
-          <img class="image img-half img-center" src="../images/RAPIDS-cloud.png">
+          <img class="image img-half img-center" src="images/RAPIDS-cloud.png">
         </div>
         <div class="column is-one-third">
           <h3 class="has-text-centered">1/2 size center</h3>
-          <img class="image img-half img-center" src="../images/RAPIDS-cloud.png">
+          <img class="image img-half img-center" src="images/RAPIDS-cloud.png">
         </div>
       </div>
 
       <div class="columns">
         <div class="column is-one-third">
           <h3>1/2 size</h3>
-          <img class="image img-half" src="../images/RAPIDS-cloud.png">
+          <img class="image img-half" src="images/RAPIDS-cloud.png">
         </div>
         <div class="column is-one-third">
           <h3>1/3 size</h3>
-          <img class="image img-third" src="../images/RAPIDS-cloud.png">
+          <img class="image img-third" src="images/RAPIDS-cloud.png">
         </div>
         <div class="column is-one-third">
           <h3>1/4 size</h3>
-          <img class="image img-quarter" src="../images/RAPIDS-cloud.png">
+          <img class="image img-quarter" src="images/RAPIDS-cloud.png">
         </div>
       </div>
 
       <div class="columns">
         <div class="column is-4 is-offset-4">
           <h3 class="has-text-centered">sized by column</h3>
-          <img class="image" src="../images/RAPIDS-cloud.png">
+          <img class="image" src="images/RAPIDS-cloud.png">
         </div>
       </div>
 
       <div class="columns">
         <div class="column is-one-half">
           <h3 class="has-text-centered">sized by column</h3>
-          <img class="image img-center" src="../images/RAPIDS-cloud.png">
+          <img class="image img-center" src="images/RAPIDS-cloud.png">
         </div>
         <div class="column is-one-half">
           <h3 class="has-text-centered">sized by column</h3>
-          <img class="image img-center" src="../images/RAPIDS-cloud.png">
+          <img class="image img-center" src="images/RAPIDS-cloud.png">
         </div>
       </div>
 
@@ -419,7 +416,7 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 
   <!-- Inserts contributors.html template -->
   <div x-data="{ section: '' }" x-init="
-  fetch('contributors.html')
+  fetch('includes/contributors.html')
   .then(data => { 
     if (data.ok) {
       return data.text()
@@ -435,7 +432,7 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 
   <!-- Inserts adopters.html template -->
   <div x-data="{ section: '' }" x-init="
-  fetch('adopters.html')
+  fetch('includes/adopters.html')
   .then(data => { 
     if (data.ok) {
       return data.text()
@@ -451,7 +448,7 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 
   <!-- Inserts open-source.html template -->
   <div x-data="{ section: '' }" x-init="
-    fetch('open-source.html')
+    fetch('includes/open-source.html')
     .then(data => { 
       if (data.ok) {
         return data.text()
@@ -466,8 +463,8 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 
 
   <!-- Inserts footer.html template -->
-  <div x-data="{ footer: '' }" x-init="
-    fetch('footer.html')
+  <div x-data="{footer: '' }" x-init="
+    fetch('includes/footer.html')
     .then(data => { 
       if (data.ok) {
         return data.text()
@@ -480,7 +477,7 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
     <footer x-html="footer"></footer>
   </div>
 
-  <!-- Everything else -->
+  <!-- Global JS -->
   <script src="js/main.js"></script>
 
 </body>

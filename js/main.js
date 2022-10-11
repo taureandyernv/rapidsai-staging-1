@@ -1,4 +1,4 @@
-console.log("// GPUs FTW")
+console.log("// NVIDIA GPUs FTW")
 
 /* code copy */
 /* source: https://remarkablemark.org/blog/2021/06/01/add-copy-code-to-clipboard-button-to-jeyll-site/ */
