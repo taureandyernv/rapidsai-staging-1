@@ -2,6 +2,7 @@
 <html class="no-js" lang="">
 
 <!-- REQUIRED FOR EVERY PAGE -->
+
 <head>
   <meta charset="utf-8">
   <title>RAPIDS.ai | GPU accelerated data science</title>
@@ -60,22 +61,256 @@
       </p>
       <button class="button-rapids-teal"><a href="#">Get Started</a></button>
     </div>
-    <div class="slant-up-container">
+    <div class="top-slant-container">
       <div class="top-slant-up has-background-white"></div>
     </div>
   </section>
 
-  <!-- Content -->
-  <section class="section">
+  <!-- Intro -->
+  <section class="section padding-bottom-slant">
     <div class="container">
-      <h1 class="has-text-centered">This Page Intentionally Left Blank</h1>
+      <h1 class="has-text-centered mb-5">GPU accelerated data science</h1>
       <div class="columns">
-        <div class="column is-full has-text-centered">
-          ..wait, then is it really blank?
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> What is RAPIDS </h2>
+          <p> NVIDIA GPU based data science libraries in such as cuDF (similar to Pandas), cuML (similar to
+            scikit-learn), and cuGraph (similar to networkX). Learn more about our 14+ libraries and more about
+            hardware-software requirements. </p>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Why Use RAPIDS</h2>
+          <p> Spend less time training and moving data, more time optimizing and working. 20x - 100billion X performance
+            increase over CPU with TCOs up to 7x. RAPIDS enables End to end GPU data science, with familiar APIs and
+            libraries that seamlessly work together. Use RAPIDS with a local desktop, in the cloud, or scale out on
+            large clusters. Learn more about RAPIDS acceleration. </p>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Open Source </h2>
+          <p>RAPIDS is an open source project, with our repositories freely available on GitHub. Being open source
+            enables a whole ecosystem of contributors, adopters, and integrators using RAPIDS to build their own
+            projects. Find out more in our ecosystems page, what RAPID enables, and what it can do for your project with
+            our example use cases. </p>
+        </div>
+      </div>
+
+      <div class="columns mt-5">
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> cuDF vs Pandas</h2>
+          [ quick comparison graphic ]
+          Note about API similarity
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> cuML vs scikit-learn</h2>
+          [ quick comparison graphic ]
+          Note about API similarity
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> cuGraph vs NetworkX</h2>
+          [ quick comparison graphic ]
+          Note about API similarity
         </div>
       </div>
     </div>
   </section>
+
+  <div class="top-slant-container">
+    <div class="top-slant-down has-background-rapids-gray"></div>
+  </div>
+
+
+  <!-- Get Started -->
+  <section class="section has-background-rapids-gray padding-bottom-slant">
+    <div class="container">
+      <h1>Get Started</h1>
+      <div class="columns">
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Quick Local Install </h2>
+          <p>RAPIDS offers several installation methods, the quickest is shown below.</p>
+
+          <h3 class="mt-5">Requirements</h3>
+          <p><strong>A.</strong> Compatible NVIDIA GPUs and Ubuntu 18.04/20.04, CentOS, Rocky Linux 8 or via WSL2 on
+            Windows 11. </p>
+          <p><strong>B.</strong> The latest CUDA and NVIDIA drivers. Check by using: <code>nvidia-smi</code>
+
+          <h3 class="mt-6">Install with Conda</h3>
+          <p><strong>1.</strong> Download and run the conda install script: </p>
+          <pre class="highlight"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
+          <br>
+          <p><strong>2.</strong> Then install rapids with:</p>
+          <pre class="highlight"><code>conda create -n rapids-22.08 -c rapidsai -c nvidia -c conda-forge  \
+             rapids=22.08 python=3.9 cudatoolkit=11.5</code></pre>
+
+          <h3 class="mt-6">Install with PIP</h3>
+          <p><strong>1.</strong> Install via pip channels:</p>
+          <pre class="highlight"><code>pip install cudf cuml cugraph cuspatial cuxfilter</code></pre>
+
+        </div>
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Try Online </h2>
+          <p>Try out RAPIDS with cloud based hardware from one of these featured channels. </p>
+          <br>
+          <h3>Amazon Sagemaker Studio Lab</h3>
+          <p>Enables notebook based environments in a free trial - account required.</p>
+          <br>
+          <h3>PaperSpace</h3>
+          <p>Use Quick Start Instances</p>
+          <br>
+          <h3>NVIDIA LaunchPad</h3>
+          <p>Free short term use to try and learn with hands-on labs.</p>
+
+          <h2 class="mt-6"><i class="fa-light fa-square-code"></i> Do I need an Advanced Install?</h2>
+          <p>If you have an uncommon OS, hardware configuration, environment, or need specific versioning such as `CUDA
+            11.5` or `Python 3.7` you should use the installation selector in our advanced installations page.</p>
+          <br>
+          <h3>Install with Docker</h3>
+          <p>Because Docker has several unique options, jump to the installation selector for directions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guides -->
+  <div class="top-slant-container">
+    <div class="top-slant-up has-background-rapids-purple-primary"></div>
+  </div>
+
+  <section class="section has-background-rapids-purple-primary">
+    <div class="container">
+      <h1 class="has-text-white">Guides and Tutorials</h1>
+      <div class="columns">
+        <div class="column is-half">
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Example Notebook </h2>
+          <p class="has-text-white"> Description of notebook goes here with link <a href="#">Try Out Now <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Example Notebook </h2>
+          <p class="has-text-white"> Description of notebook goes here with link <a href="#">Try Out Now <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Example Notebook </h2>
+          <p class="has-text-white"> Description of notebook goes here with link <a href="#">Try Out Now <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+        </div>
+        <div class="column is-half">
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> RAPIDS Libraries </h2>
+          <p class="has-text-white"> Link to Libraries page <a href="#">Libraries <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> RAPIDS Documentation </h2>
+          <p class="has-text-white"> For advanced installation and information <a href="#"> documentation <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Advanced Users</h2>
+          <p class="has-text-white"> For advanced information <a href="#"> GitHub Links and readmes <i
+                class="fa-solid fa-arrow-up-right"></i>
+            </a> </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bottom-slant-container">
+    <div class="bottom-slant-down has-background-rapids-purple-primary"></div>
+  </div>
+
+  <!-- News -->
+  <section class="section padding-top-slant">
+    <div class="container">
+      <h1 class="mb-5">RAPIDS News</h1>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Featured Talks </h2>
+          <p> Check out these featured GTC 2022 talks. Find more in the news section </p>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Service Notices </h2>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the news section.</p>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Featured Post </h2>
+          <p>Long lasting post</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Posts -->
+  <div x-data="{ posts: '' }" x-init="
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts = json.medium.slice(0,3)
+    })
+    .catch(error => {console.error(error)})">
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <template x-for="article in posts">
+            <div class="column is-one-third">
+              <a x-bind:href="article.mediumLink" target="_blank">
+                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3>
+                <p class="post-text"><i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span>
+                  <i class="fa-sharp fa-solid fa-quote-right"></i>
+                </p>
+              </a>
+              <p class="post-action"><i class="fa-light fa-pen"></i> Post by <span x-text="article.poster"></span></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Tweets -->
+  <div x-data="{ posts: '' }" x-init="
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts = json.twitter.slice(0,3)
+    })
+    .catch(error => {console.error(error)})">
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <template x-for="tweets in posts">
+            <div class="column is-one-third">
+              <a x-bind:href="tweets.link" target="_blank">
+                <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span></h3>
+                <p class="post-text"><i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span>
+                  <i class="fa-sharp fa-solid fa-quote-right"></i>
+                </p>
+              </a>
+              <p class="post-action"><i class="fa-light fa-pen"></i> Tweet by <a href="https://twitter.com/rapidsai"
+                  target="_blank">@rapidsai</a></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+  </div>
 
   <!-- Inserts footer.html template -->
   <div x-data="{ footer: '' }" x-init="
