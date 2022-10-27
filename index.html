@@ -95,17 +95,17 @@
 
       <div class="columns mt-5">
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> cuDF vs Pandas</h2>
+          <h2><i class="fa-light fa-square-code"></i> Pandas to cuDF</h2>
           [ quick comparison graphic ]
           Note about API similarity
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> cuML vs scikit-learn</h2>
+          <h2><i class="fa-light fa-square-code"></i> scikit-learn to cuML </h2>
           [ quick comparison graphic ]
           Note about API similarity
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> cuGraph vs NetworkX</h2>
+          <h2><i class="fa-light fa-square-code"></i> NetworkX to cuGraph </h2>
           [ quick comparison graphic ]
           Note about API similarity
         </div>
@@ -121,29 +121,35 @@
   <!-- Get Started -->
   <section class="section has-background-rapids-gray padding-bottom-slant">
     <div class="container">
-      <h1>Get Started</h1>
+      <h1 class="mb-5">Quick Start</h1>
       <div class="columns">
         <div class="column is-half">
           <h2><i class="fa-light fa-square-code"></i> Quick Local Install </h2>
           <p>RAPIDS offers several installation methods, the quickest is shown below.</p>
 
           <h3 class="mt-5">Requirements</h3>
-          <p><strong>A.</strong> Compatible NVIDIA GPUs and Ubuntu 18.04/20.04, CentOS, Rocky Linux 8 or via WSL2 on
-            Windows 11. </p>
-          <p><strong>B.</strong> The latest CUDA and NVIDIA drivers. Check by using: <code>nvidia-smi</code>
+          <p><strong>A.</strong> Compatible NVIDIA GPUs</p>
+          <p><strong>B.</strong> Ubuntu 18.04/20.04, CentOS, Rocky Linux 8 or via WSL2 on Windows 11.</p>
+          <p><strong>C.</strong> The latest CUDA and NVIDIA drivers. Check yours with: <code>nvidia-smi</code>
 
           <h3 class="mt-6">Install with Conda</h3>
           <p><strong>1.</strong> Download and run the conda install script: </p>
           <pre class="highlight"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
           <br>
-          <p><strong>2.</strong> Then install rapids with:</p>
+          <p><strong>2.</strong> Then quick install rapids with:</p>
           <pre class="highlight"><code>conda create -n rapids-22.08 -c rapidsai -c nvidia -c conda-forge  \
              rapids=22.08 python=3.9 cudatoolkit=11.5</code></pre>
 
           <h3 class="mt-6">Install with PIP</h3>
           <p><strong>1.</strong> Install via pip channels:</p>
-          <pre class="highlight"><code>pip install cudf cuml cugraph cuspatial cuxfilter</code></pre>
+          <pre class="highlight"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
+pip install cuml-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
+pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></pre>
+
+          <h3 class="mt-6">Install with Docker</h3>
+          <p><strong>1.</strong> Docker has several unique configuration options, jump to the installation selector for
+            directions.</p>
 
         </div>
         <div class="column is-half">
@@ -160,11 +166,12 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
           <p>Free short term use to try and learn with hands-on labs.</p>
 
           <h2 class="mt-6"><i class="fa-light fa-square-code"></i> Do I need an Advanced Install?</h2>
-          <p>If you have an uncommon OS, hardware configuration, environment, or need specific versioning such as `CUDA
-            11.5` or `Python 3.7` you should use the installation selector in our advanced installations page.</p>
+          <p> If you have an uncommon OS, hardware configuration, environment, or need specific versioning such as
+            <code>CUDA
+            11.5</code> or <code>Python 3.7</code> then you should use the installation selector in our advanced
+            installations page.</p>
           <br>
-          <h3>Install with Docker</h3>
-          <p>Because Docker has several unique options, jump to the installation selector for directions.</p>
+
         </div>
       </div>
     </div>
@@ -175,9 +182,9 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
     <div class="top-slant-up has-background-rapids-purple-primary"></div>
   </div>
 
-  <section class="section has-background-rapids-purple-primary">
+  <section class="section padding-bottom-slant padding-top-slant has-background-rapids-purple-primary">
     <div class="container">
-      <h1 class="has-text-white">Guides and Tutorials</h1>
+      <h1 class="has-text-white mb-5">Guides and Tutorials</h1>
       <div class="columns">
         <div class="column is-half">
           <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Example Notebook </h2>
@@ -198,16 +205,16 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
         </div>
         <div class="column is-half">
           <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> RAPIDS Libraries </h2>
-          <p class="has-text-white"> Link to Libraries page <a href="#">Libraries <i
+          <p class="has-text-white"> Link to Ecosystem page <a href="#">Libraries <i
                 class="fa-solid fa-arrow-up-right"></i> </a> </p>
           <br>
 
           <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> RAPIDS Documentation </h2>
-          <p class="has-text-white"> For advanced installation and information <a href="#"> documentation <i
+          <p class="has-text-white"> For API information <a href="#"> documentation <i
                 class="fa-solid fa-arrow-up-right"></i> </a> </p>
           <br>
 
-          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Advanced Users</h2>
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Advanced Guides</h2>
           <p class="has-text-white"> For advanced information <a href="#"> GitHub Links and readmes <i
                 class="fa-solid fa-arrow-up-right"></i>
             </a> </p>
@@ -220,97 +227,293 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
     <div class="bottom-slant-down has-background-rapids-purple-primary"></div>
   </div>
 
+
   <!-- News -->
-  <section class="section padding-top-slant">
+  <section class="section padding-bottom-slant padding-top-slant has-background-rapids-gray">
+
     <div class="container">
-      <h1 class="mb-5">RAPIDS News</h1>
+      <h1 class="mb-5">Latest News</h1>
       <div class="columns">
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Featured Talks </h2>
-          <p> Check out these featured GTC 2022 talks. Find more in the news section </p>
+          <h2><i class="fa-light fa-square-code"></i> Service Notices </h2>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> New Notice Section <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Service Notices </h2>
-          <p> EOL for CUDA 11.0 in v22.10 Learn more in the news section.</p>
+          <h2><i class="fa-light fa-square-code"></i> Featured Talks </h2>
+          <p> Check out these featured GTC 2022 talks. Find more in the <a href="#"> Talk Section <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-light fa-square-code"></i> Featured Post </h2>
-          <p>Long lasting post</p>
+          <p>Long lasting post. Find more in the <a href="#"> Posts Section <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Posts -->
-  <div x-data="{ posts: '' }" x-init="
-    fetch('https://rapidsai.github.io/site-data/posts.json')
-    .then(json => { 
-      if (json.ok) {
-          return json.json()
-      }
-      posts = '' // load blank
-      throw new Error('Failed to load posts.json')
-    })
-    .then(json => {
-      posts = json.medium.slice(0,3)
-    })
-    .catch(error => {console.error(error)})">
 
-    <section class="section">
-      <div class="container">
+    <!-- Posts -->
+    <div x-data="{ posts: '' }" x-init="
+      fetch('https://rapidsai.github.io/site-data/posts.json')
+      .then(json => { 
+        if (json.ok) {
+            return json.json()
+        }
+        posts = '' // load blank
+        throw new Error('Failed to load posts.json')
+      })
+      .then(json => {
+        posts = json.medium.slice(0,3)
+      })
+      .catch(error => {console.error(error)})">
+
+      <div class="container mt-5">
+        <h2><i class="fa-light fa-square-code"></i> Latest Tweets </h2>
         <div class="columns">
           <template x-for="article in posts">
             <div class="column is-one-third">
               <a x-bind:href="article.mediumLink" target="_blank">
                 <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3>
-                <p class="post-text"><i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span>
-                  <i class="fa-sharp fa-solid fa-quote-right"></i>
-                </p>
               </a>
-              <p class="post-action"><i class="fa-light fa-pen"></i> Post by <span x-text="article.poster"></span></p>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span> <i
+                  class="fa-sharp fa-solid fa-quote-right"></i>
+                <span class="post-action"> - Post by <span x-text="article.poster"></span> </span>
+              </p>
             </div>
           </template>
         </div>
       </div>
-    </section>
 
-  </div>
+    </div>
 
-  <!-- Tweets -->
-  <div x-data="{ posts: '' }" x-init="
-    fetch('https://rapidsai.github.io/site-data/posts.json')
-    .then(json => { 
-      if (json.ok) {
-          return json.json()
-      }
-      posts = '' // load blank
-      throw new Error('Failed to load posts.json')
-    })
-    .then(json => {
-      posts = json.twitter.slice(0,3)
-    })
-    .catch(error => {console.error(error)})">
+    <!-- Tweets -->
+    <div x-data="{ posts: '' }" x-init="
+      fetch('https://rapidsai.github.io/site-data/posts.json')
+      .then(json => { 
+        if (json.ok) {
+            return json.json()
+        }
+        posts = '' // load blank
+        throw new Error('Failed to load posts.json')
+      })
+      .then(json => {
+        posts = json.twitter.slice(0,3)
+      })
+      .catch(error => {console.error(error)})">
 
-    <section class="section">
-      <div class="container">
+      <div class="container mt-5">
+        <h2><i class="fa-light fa-square-code"></i> Latest Posts </h2>
         <div class="columns">
           <template x-for="tweets in posts">
             <div class="column is-one-third">
               <a x-bind:href="tweets.link" target="_blank">
                 <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span></h3>
-                <p class="post-text"><i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span>
-                  <i class="fa-sharp fa-solid fa-quote-right"></i>
-                </p>
               </a>
-              <p class="post-action"><i class="fa-light fa-pen"></i> Tweet by <a href="https://twitter.com/rapidsai"
-                  target="_blank">@rapidsai</a></p>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span> <i
+                  class="fa-sharp fa-solid fa-quote-right"></i>
+                <span class="post-action"> - Tweet by <a href="https://twitter.com/rapidsai"
+                    target="_blank">@rapidsai</a> </span>
+              </p>
             </div>
           </template>
         </div>
       </div>
-    </section>
+    </div>
 
+  </section>
+
+  <div class="top-slant-container">
+    <div class="top-slant-up has-background-white"></div>
   </div>
+
+  <!-- Ecosystem-->
+  <section class="section">
+    <div class="container">
+      <h1 class="mb-5">Ecosystem</h1>
+      <div class="columns">
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Core RAPIDS Projects </h2>
+          <p>Find out details on the core RAPIDS projects like cuDF, cuML, cuGraph, and more on our Ecosystem page. Or jump to our GitHub page or documentation for specific details <a href="#"> See RAPIDS Projects <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Built with RAPIDS </h2>
+          <p>See all the projects using RAPIDS and all those that integrate well with RAPIDS in our integrations and projects section <a href="#"> See Projects <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+  <section class="section">
+
+    <div class="container">
+      <h2><i class="fa-light fa-square-code"></i> Open Source Community </h2>
+      <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between">
+        <div class="img-w100">
+          <a href="https://arrow.apache.org/" target="_blank"> <img src="images/apache-arrow_Color.png"
+              alt="Apache Arrow"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://dask.org/" target="_blank"> <img src="images/dask_logo.png" alt="Dask"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://nuclio.io" target="_blank"> <img src="images/nuclio-logo.png" alt="nuclio"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://numba.pydata.org/" target="_blank"> <img src="images/numba_logo.png" alt="Numba"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://scikit-learn.org/stable/index.html" target="_blank"> <img src="images/scikit-learn_Color.png" alt="scikitlearn"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://xgboost.ai/" target="_blank"> <img src="images/xgboost_logo.png" alt="XGboost"> </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-6">
+      <h2><i class="fa-light fa-square-code"></i> Adopters </h2>
+      <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between">
+        <div class="img-w100">
+          <a href="https://anyscale.com/" target="_blank"> <img src="images/Anyscale-logo.png" alt="anyscale"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.boozallen.com" target="_blank"> <img src="images/booz-allen-hamilton-logo.png"
+              alt="booz-allen-hamilton"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/capitalone" target="_blank"> <img src="images/capital_one_logo.png"
+              alt="capitalOne"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/databricks" target="_blank"> <img src="images/databricks-logo.png" alt="databricks">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.deepwavedigital.com" target="_blank"> <img src="images/deepwave-digital.png"
+              alt="deepwave-digital"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/graphistry" target="_blank"> <img src="images/graphistry.png" alt="graphistry"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/h2oai" target="_blank"> <img src="images/gpu-ventures-h2o-ai-logo.png" alt="h20ai">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://ibm.github.io/" target="_blank"> <img src="images/ibm-logo.png" alt="ibm"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.iguazio.com/docs/" target="_blank"> <img src="images/iguazio_logo.png" alt="iguzaio"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/INRIA" target="_blank"> <img src="images/inria-logo.png" alt="inria"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/kineticadb" target="_blank"> <img src="images/kinetica_logo.png" alt="kinetica">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://paperspace.com" target="_blank"> <img src="images/paperspace.png" alt="paperspace"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://plotly.com/dash/" target="_blank"> <img src="images/Plotly_Dash_logo.png" alt="plotly dash">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.preferred-networks.jp/en/" target="_blank"> <img src="images/PFN-logo.png"
+              alt="preferred-networks"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://pytorch.org/" target="_blank"> <img src="images/PyTorch_logo.png" alt="pytorch"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://ray.io/" target="_blank"> <img src="images/ray-logo.png" alt="ray"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.saturncloud.io" target="_blank"> <img src="images/saturn-cloud-logo.png"
+              alt="saturn-cloud"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/uber" target="_blank"> <img src="images/uber_logo_2018.png" alt="uber"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://ursalabs.org/" target="_blank"> <img src="images/ursa_logo.png" alt="ursa"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://corporate.walmart.com/tech" target="_blank"> <img src="images/Walmart-logo.png" alt="walmart">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-6">
+      <h2><i class="fa-light fa-square-code"></i> Contributors </h2>
+      <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between">
+        <div class="img-w100">
+          <a href="https://www.anaconda.com/anaconda-community/" target="_blank"> <img src="images/anaconda.png" alt="anaconda"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/capitalone" target="_blank"> <img src="images/capital_one_logo.png" alt="capitalOne"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/chainer" target="_blank"> <img src="images/Chainer-logo.png" alt="chainer"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://cupy.chainer.org/" target="_blank"> <img src="images/cupy-logo.png" alt="cuPY"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/deepwavedigital" target="_blank"> <img src="images/deepwave-digital.png" alt="deepwave-digital"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://gunrock.github.io/docs/" target="_blank"> <img src="images/Gunrock_Color.png" alt="gunrock">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://developer.nvidia.com/open-source" target="_blank"> <img src="images/nvidia-logo-vert.png" alt="nvidia"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/quansight-labs" target="_blank"> <img src="images/quansight.png" alt="quantsight">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://corporate.walmart.com/tech" target="_blank"> <img src="images/Walmart-logo.png" alt="walmart">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="bottom-slant-container">
+    <div class="bottom-slant-down has-background-white"></div>
+  </div>
+
+<!-- Learn More CTA -->
+<section class="section has-background-rapids-gray padding-top-slant padding-bottom-slant">
+
+  <div class="container">
+    <h1 class="mb-5">Learn More</h1>
+    <div class="columns">
+      <div class="column is-one-third">
+        <h2><i class="fa-light fa-square-code"></i> About RAPIDS</h2>
+        <p> Learn more about the history and goals of RAPIDS starting with Apache Arrow, GoAi, and its relationship with NVIDIA. </p>
+      </div>
+      <div class="column is-one-third">
+        <h2><i class="fa-light fa-square-code"></i> How to Connect</h2>
+        <p> Find business and enterprise connection resources, community resources, and guides for RAPIDS evangelism. </p>
+      </div>
+      <div class="column is-one-third">
+        <h2><i class="fa-light fa-square-code"></i> Industry Use Cases </h2>
+        <p>Hear about success stories, resources for integrating with RAPIDS and deployment strategies. </p>
+      </div>
+    </div>
+  </div>
+
+  </section>
 
   <!-- Inserts footer.html template -->
   <div x-data="{ footer: '' }" x-init="
