@@ -92,6 +92,13 @@ code {
   box-shadow: 0px 3px 2px rgb(0 0 0 / 20%) inset;
 }
 
+.border-bottom-white {
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: outset;
+  line-height: 1.2rem; 
+}
+
 .mt-6 {
   margin-top: 2.5rem !important;
 }
@@ -279,6 +286,15 @@ button:hover {
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
+
+.hero-announce  {
+  display: flex;
+  justify-content: center;
+  margin-top: -4rem;
+  margin-bottom: 3rem;
+  font-size: 0.85rem;
+}
+
 
 /* /// slant graphics /// */
 /* https://css-tricks.com/using-box-shadows-and-clip-path-together/ */
