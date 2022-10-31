@@ -34,6 +34,7 @@
 
   <script src="https://kit.fontawesome.com/1690513e32.js"></script>
   <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -99,17 +100,23 @@
       <div class="columns mt-5">
         <div class="column is-one-third">
           <h2><i class="fa-light fa-square-code"></i> Pandas to cuDF</h2>
-          [ quick comparison graphic ]
+
+          <canvas id="cuDFchart" width="400" height="200"></canvas>
+          
           Note about API similarity
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-light fa-square-code"></i> scikit-learn to cuML </h2>
-          [ quick comparison graphic ]
+
+          <canvas id="cuMLchart" width="400" height="200"></canvas>
+
           Note about API similarity
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-light fa-square-code"></i> NetworkX to cuGraph </h2>
-          [ quick comparison graphic ]
+
+          <canvas id="cuGraphChart" width="400" height="200"></canvas>
+
           Note about API similarity
         </div>
       </div>
@@ -535,6 +542,162 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
 
   <!-- Global JS -->
   <script src="js/main.js"></script>
+
+  <!-- Chart.js perf charts -->
+  <script>
+    const ctx = document.getElementById('cuDFchart');
+    const cuDFchart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['pandas', 'cuDF'],
+            datasets: [{
+                label: 'Performance i7 6700 cpu vs single GPU V100',
+                data: [100, 10],
+                backgroundColor: [
+                    'rgb(6, 152, 255, 0.60)',
+                    'rgb(115, 6, 255, .60)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                      display: false,
+                      borderWidth: 0
+                    }
+                },
+                x: {
+                  grid: {
+                    display: false,
+                    drawTicks: false,
+                    borderWidth: 2
+                  }
+                }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              title: {
+                display: true,
+                text: 'Pandas vs cuDF Performance'
+              }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+
+    const ctx2 = document.getElementById('cuMLchart');
+    const cuMLchart = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['scikit-learn', 'cuML'],
+            datasets: [{
+                label: 'Performance i7 6700 cpu vs single GPU V100',
+                data: [150, 10],
+                backgroundColor: [
+                    'rgb(6, 152, 255, 0.60)',
+                    'rgb(115, 6, 255, .60)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                      display: false,
+                      borderWidth: 0
+                    }
+                },
+                x: {
+                  grid: {
+                    display: false,
+                    drawTicks: false,
+                    borderWidth: 2
+                  }
+                }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              title: {
+                display: true,
+                text: 'scikit-learn vs cuML Performance'
+              }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+
+    const ctx3 = document.getElementById('cuGraphChart');
+    const cuGraphChart = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['networkx', 'cuGraph'],
+            datasets: [{
+                label: 'Performance i7 6700 cpu vs single GPU V100',
+                data: [300, 10],
+                backgroundColor: [
+                    'rgb(6, 152, 255, 0.60)',
+                    'rgb(115, 6, 255, .60)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                      display: false,
+                      borderWidth: 0
+                    }
+                },
+                x: {
+                  grid: {
+                    display: false,
+                    drawTicks: false,
+                    borderWidth: 2
+                  }
+                }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              title: {
+                display: true,
+                text: 'networkx vs cuGraph Performance'
+              }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+  </script>
 
 </body>
 
