@@ -287,14 +287,29 @@ button:hover {
   padding-bottom: 7rem;
 }
 
-.hero-announce  {
+.hero-announce-container  {
   display: flex;
   justify-content: center;
-  margin-top: -4rem;
-  margin-bottom: 3rem;
-  font-size: 0.85rem;
 }
 
+.hero-announce  {
+  position: relative;
+  font-size: 0.85rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.announce-icon {
+  position: absolute;
+  font-size: 0.75rem;
+  top: -0.65rem;
+  left: 0;
+  border-radius: 1rem;
+  border-style: none;
+  color: white;
+  padding: 0.1rem 0.34rem;
+  background-color: #7400ff;
+}
 
 /* /// slant graphics /// */
 /* https://css-tricks.com/using-box-shadows-and-clip-path-together/ */
