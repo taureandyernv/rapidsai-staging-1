@@ -2,6 +2,7 @@
 <html class="no-js" lang="">
 
 <!-- REQUIRED FOR EVERY PAGE -->
+
 <head>
   <meta charset="utf-8">
   <title>RAPIDS.ai | Latest News</title>
@@ -65,7 +66,169 @@
     </div>
   </section>
 
-<!-- Content -->
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <h1 class="has-text-centered mb-4">Latest RAPIDS News</h1>
+      <div class="columns">
+        <div class="column is-full">
+          <p class="subtitle has-text-centered"> The latest and featured notices, posts, videos, tweets and other
+            content. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Posts -->
+  <section class="section padding-bottom-slant has-background-white">
+
+    <div class="container">
+      <h2><i class="fa-light fa-square-code"></i> Service Notices </h2>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3> RSN21 Service Notice </h3>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h3>RSN 20 Service Notice </h3>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h3> RSN 18 Service Notice </h3>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Posts -->
+    <div x-data="{ posts: '' }" x-init="
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts = json.medium.slice(0,3)
+    })
+    .catch(error => {console.error(error)})">
+
+      <div class="container mt-7">
+        <h2><i class="fa-light fa-square-code"></i> Latest Tweets </h2>
+        <div class="columns">
+          <template x-for="article in posts">
+            <div class="column is-one-third">
+              <a x-bind:href="article.mediumLink" target="_blank">
+                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3>
+              </a>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span> <i
+                  class="fa-sharp fa-solid fa-quote-right"></i>
+                <span class="post-action"> - Post by <span x-text="article.poster"></span> </span>
+              </p>
+            </div>
+          </template>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tweets -->
+    <div x-data="{ posts: '' }" x-init="
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts = json.twitter.slice(0,3)
+    })
+    .catch(error => {console.error(error)})">
+
+      <div class="container mt-7">
+        <h2><i class="fa-light fa-square-code"></i> Latest Posts </h2>
+        <div class="columns">
+          <template x-for="tweets in posts">
+            <div class="column is-one-third">
+              <a x-bind:href="tweets.link" target="_blank">
+                <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span></h3>
+              </a>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span> <i
+                  class="fa-sharp fa-solid fa-quote-right"></i>
+                <span class="post-action"> - Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
+              </p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Featured -->
+  <div class="top-slant-container">
+    <div class="top-slant-down has-background-rapids-gray"></div>
+  </div>
+
+  <section class="section padding-bottom-slant has-background-rapids-gray">
+
+    <div class="container">
+      <h1 class="has-text-centered mb-5">Featured Content </h1>
+      <div class="columns">
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="images/HPO-space-2.png">
+          <h2> GTC 2022 Talk - How GPUS are Better </h2>
+          <p> Numba is the Just-In-Time compiler used in RAPIDS cuDF to implement high-performance User-Defined Functions (UDFs) by turning user-supplied Python functions into CUDA kernels... </p>
+          <a href="#"> Read More <i class="fa-solid fa-arrow-up-right"></i></a> 
+        </div>
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="images/XGboost-benchmark.png">
+          <h2> GTC 2022 Talk </h2>
+          <p> Check out these featured GTC 2022 talks. Find more in the link below.  </p>
+          <a href="#"> Talk Section <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="images/NumFocus_Color.png">
+          <h2> Weather Notebook 22 </h2>
+          <p>  Our latest weather notebook shows off our new nested JSON support in cuDF.</p>
+          <a href="#"> View Notebook in Studio Lab <i class="fa-solid fa-arrow-up-right"></i></a> 
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="images/RAPIDS404.gif">
+          <h2> Video - GPU 101 </h2>
+          <p> Numba is the Just-In-Time compiler used in RAPIDS cuDF to implement high-performance User-Defined Functions (UDFs) by turning user-supplied Python functions into CUDA kernels... </p>
+          <a href="#"> See More <i class="fa-solid fa-arrow-up-right"></i></a> 
+        </div>
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="images/rapids-end-to-end-performance-chart-oss-page-r4.svg">
+          <h2> Featured Talks </h2>
+          <p> Check out these featured GTC 2022 talks. Find more in the link belwo.  </p>
+          <a href="#"> Talk Section <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+        <div class="column is-one-third">
+          <img class="image img-center" src="images/GCP-logo.png">
+          <h2> Google Talk on GCP </h2>
+          <p>Long lasting post. Find more in the link below. </p>
+          <a href="#"> Posts Section <i class="fa-solid fa-arrow-up-right"></i></a> 
+        </div>
+      </div>
+    </div>
+
+  </section>
 
   <!-- Inserts footer.html template -->
   <div x-data="{ footer: '' }" x-init="
