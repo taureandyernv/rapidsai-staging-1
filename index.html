@@ -153,8 +153,8 @@
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
           <br>
           <p><strong>2.</strong> Then quick install rapids with:</p>
-          <pre class="highlight"><code>conda create -n rapids-22.08 -c rapidsai -c nvidia -c conda-forge  \
-             rapids=22.08 python=3.9 cudatoolkit=11.5</code></pre>
+          <pre class="highlight"><code>conda create -n rapids-22.12 -c rapidsai -c nvidia -c conda-forge  \
+             rapids=22.12 python=3.9 cudatoolkit=11.5</code></pre>
 
           <h3 class="mt-6">Install with PIP</h3>
           <p><strong>1.</strong> Install via pip channels:</p>
@@ -220,7 +220,17 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
         </div>
         <div class="column is-half">
           <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> RAPIDS Libraries </h2>
-          <p class="has-text-white"> Link to Ecosystem page <a href="#">Libraries <i
+          <p class="has-text-white"> RAPIDS is made up of our Core Libraries (cuDF, cuML, and cuGraph) as well as our extended libraries (cuXFilter, cuSpatial, and 
+          - cuDF - GPU Accelerated, Pandas-like Dataframe Processing
+ 		  - cuML - GPU Accelerated, SciKitLearn-like Machine Learning
+		  - cugraph - GPU Accelerated, NetworkX-like Graph Analytics
+		  as well as a growing number of our extended libraries
+		  - cuXfilter - Interactive Data Visualization
+		  - cuSpatial - GPU Accelerated, Spatial Analytics
+		  - cuSignal - GPU Accelerated, scipy-like Signal Analytics
+		  - cuCIM - GPU Accelerated, SciKitImage-like Image Processing
+		  
+		  <a href="#">Libraries <i
                 class="fa-solid fa-arrow-up-right"></i> </a> </p>
           <br>
 
